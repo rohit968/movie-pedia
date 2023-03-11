@@ -1,0 +1,42 @@
+.section {
+  height: 70vh;
+  margin: 8em 2em;
+  color: white;
+  padding: 1.5em;
+
+  .section-heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    margin-bottom: 1em;
+  }
+
+  .card-contents {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 65vh;
+    text-align: center;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+  
+    .movie-card-container {
+      height: 60vh;
+      border-radius: 10px;
+      cursor: pointer;
+      
+
+      .card-image {
+        height: 100%;
+        width: 275px;
+        object-fit: cover;
+      }
+    }
+  }
+
+}

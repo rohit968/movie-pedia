@@ -1,0 +1,52 @@
+.banner-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .banner {
+    color: white;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+  
+    .banner-contents {
+      height: 30vh;
+      width: 60%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding-left: 3%;
+      margin-bottom: 4em;
+
+      .banner-movie-name {
+        font-size: 2rem;
+      }
+
+      .banner-movie-type {
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+      }
+
+      .banner-buttons {
+        justify-content: space-evenly;
+        margin: 0 0em;
+        cursor: pointer;
+
+        .wishlist-button {
+          display: flex;
+          justify-content: center;
+          padding: 0.5em 1.2em;
+        }
+      }
+    }
+  }
+  &::after {
+    content: '';
+    height: 7em;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, transparent, rgba(40,40,40,0.5),  rgba(37,37,37,1));
+  }
+}

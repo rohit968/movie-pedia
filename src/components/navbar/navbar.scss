@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.navbar {
+  padding: 1.5em 1em;
+  color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0,0,0,0.3);
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .logo-link {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    font-family: 'Dancing Script', cursive; 
+  }
+
+  span {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav-search {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .nav-input {
+      border: none;
+      border-bottom: 1px solid var(--main-color);
+      width: 70%;
+      padding: 0.5em 1em;
+      color: var(--whitesmoke);
+      &:focus {
+        outline: var(--main-color);
+      }
+    }
+
+    .search-icon {
+      margin-left: 0.5em;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+  }
+
+
+  
+
+  .nav-btn {
+    font-size: 0.8rem;
+    margin: 0 0.5em;
+
+    &:hover, &:focus {
+      background-color: var(--whitesmoke);
+      color: var(--main-bg);
+    } 
+  }
+}
