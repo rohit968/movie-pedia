@@ -1,6 +1,8 @@
 import axios from '../axios'
 import requests from '../requests'
 
+
+
 export const fetchMovies = async () => {
   const request = await axios.get(requests.fetchTrending);
   return request.data.results;
@@ -8,6 +10,12 @@ export const fetchMovies = async () => {
 
 export const upcoming = async () => {
   const request = await axios.get(requests.fetchUpcoming);
+  return request.data.results;
+}
+
+export const nowPlaying = async (page) => {
+  const req = requests.fetchNowPlaying;
+  const request = await axios.get(`${req}page=${page}`);
   return request.data.results;
 }
 

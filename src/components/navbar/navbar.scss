@@ -38,9 +38,7 @@
 
   .nav-search {
     width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0.3em;
     
     .nav-input {
       border: none;
@@ -56,12 +54,14 @@
     .search-icon {
       margin-left: 0.5em;
       font-size: 1.15rem;
+      margin-top: -0.6em;
       cursor: pointer;
     }
   }
 
-
-  
+  .nav-buttons {
+    margin-top: -0.5em;
+  }
 
   .nav-btn {
     font-size: 0.8rem;

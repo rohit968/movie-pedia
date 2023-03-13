@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { upcoming } from "../../pages/endPoint";
+import MoreMovies from "../../pages/MoreMovies";
 import "./upcomingmovies.scss";
 
 const UpcomingMovies = () => {
@@ -22,8 +25,19 @@ const UpcomingMovies = () => {
 
   return (
     <div>
-      <div className="section">
-        <div className="section-heading">Upcoming Movies</div>
+      <div className="upcoming-section">
+        <h2
+          className="upcoming-section-heading flex"
+          style={{ justifyContent: "flex-start" }}
+        >
+          <Link
+            to={{ pathname: "/moremovies/upcoming" }}
+            className="flex page-heading-link"
+            style={{ justifyContent: "flex-start" }}
+          >
+            Upcoming Movies <HiOutlineArrowSmRight />
+          </Link>
+        </h2>
         <div className="card-contents">
           {upcomingMovies.map((movie) => (
             <>

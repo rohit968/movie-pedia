@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import "./navbar.scss";
 
 const Navbar = ({ setInput }) => {
   const [searchInput, setSearchInput] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setInput(searchInput);
+    navigate(`/search?q=${searchInput}`);
     setSearchInput("");
   };
 
@@ -28,7 +31,7 @@ const Navbar = ({ setInput }) => {
             series
           </Link>
         </div>
-        <form action="" className="nav-search" onSubmit={handleSubmit}>
+        <form action="" className="nav-search flex" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Search your movie..."
@@ -37,6 +40,7 @@ const Navbar = ({ setInput }) => {
             onChange={(e) => {
               setInput(e.target.value);
               setSearchInput(e.target.value);
+              navigate(`/search?q=${e.target.value}`);
             }}
           />
           <IoSearchOutline
@@ -47,9 +51,6 @@ const Navbar = ({ setInput }) => {
           />
         </form>
         <div className="nav-buttons">
-          <Link to="/signup" className="btn link nav-btn">
-            Sign up
-          </Link>
           <Link to="/signin" className="btn link nav-btn">
             Sign in
           </Link>

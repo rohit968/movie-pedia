@@ -6,7 +6,6 @@ const Carousel = ({ movies }) => {
   const image = `https://image.tmdb.org/t/p/original${
     movies.backdrop_path || movies.poster_path
   }`;
-  console.log(movies);
 
   return (
     <>
@@ -21,7 +20,7 @@ const Carousel = ({ movies }) => {
         >
           <div className="banner-contents flex">
             <div className="banner-movie-name">
-              {movies?.title || movies.name || movies?.original_name}
+              {movies?.title || movies?.name || movies?.original_name}
             </div>{" "}
             <p className="banner-movie-type">
               {movies.media_type} | {movies.popularity}

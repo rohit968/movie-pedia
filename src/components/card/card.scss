@@ -1,0 +1,56 @@
+.card-container {
+  height: 35vh;
+  color: white;
+  position: relative;
+  cursor: pointer;
+
+  .card-image-contain {
+    height: 25vh;
+    border-radius: 5px;
+
+    .card-image {
+      height: 100%;
+      width: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    
+    
+  }
+  .card-contents {
+    margin-left: 0.4em;
+
+    .card-title {
+      margin-top: 1em;
+      font-size: 0.9em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .extra-contents {
+      justify-content: space-evenly;
+
+      .star-rating {
+        display: flex;
+        margin-left: 0.5em;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  .bookmark-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    .bookmark-icon {
+      font-size: 1.3rem;
+      margin: 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+}
